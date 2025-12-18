@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
         return storedUser ? JSON.parse(storedUser) : null;
     });
     const [token, setToken] = useState(() => localStorage.getItem('auth_token'));
-    const [loading, setLoading] = useState(false);
+    const [loading] = useState(false);
 
 
 
