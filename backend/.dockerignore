@@ -4,7 +4,6 @@ dist
 .cache
 .strapi
 build
-.git
 .env
 README.md
 Dockerfile

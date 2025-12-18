@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import api from '../config/api';
 
 const AuthContext = createContext();
@@ -14,10 +14,7 @@ export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(() => localStorage.getItem('auth_token'));
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        // Just ensures loading is false if it was somehow true, but initialized to false now.
-        setLoading(false);
-    }, []);
+
 
     const login = async (identifier, password) => {
         try {
