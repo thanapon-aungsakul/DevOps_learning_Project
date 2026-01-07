@@ -13,14 +13,19 @@ It demonstrates how to:
 
 # Project Structure
 DevOps_learning_Project
-  ├── .github/workflows       # CI/CD workflows
-  ├── backend                 # Backend service (example)
-  ├── frontend                # Frontend service (example)
-  ├── docker-compose.yml      # Compose file for multi-service setup
-  ├── README.md
+
+├── .github/workflows       # CI/CD workflows
+
+├── backend                 # Backend service (example)
+
+├── frontend                # Frontend service (example)
+
+├── docker-compose.yml      # Compose file for multi-service setup
+
+├── README.md
   
 # Technologies & Tools
   - Docker & Docker Compose – service containerization
   - Git & GitHub Actions – version control & pipelines
-  - Nginx – reverse proxy/load balancing and up stream
+  - Nginx – reverse proxy/load balancing and upstream
   - Monitoring basics – log viewing and simple diagnostics with Prometheus&Grafana
