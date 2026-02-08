@@ -4,18 +4,27 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Building..."
+//  build:
+//    runs-on: ubuntu-latest
+//    steps:
+//      - run: echo "Building..."
 
+//  test:
+//    runs-on: ubuntu-latest
+//    needs: build
+//    steps:
+//      - run: echo "Testing..."
+
+//  hello:
+//    runs-on: ubuntu-latest
+//    needs: test
+//    steps:
+//      - run: echo "Hello World"
+  
   test:
     runs-on: ubuntu-latest
-    needs: build
+    strategy:
+      matrix:
+        node-version: [20.xx, 21.xx, 22.xx]
     steps:
-      - run: echo "Testing..."
-
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World"
+      - run: echo "Testing on Node ${{ matrix.node-version }}"
